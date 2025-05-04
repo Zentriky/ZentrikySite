@@ -1,0 +1,14 @@
+/* glow effects for words */
+.glow-word {
+  display: inline-block;
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.8s, text-shadow 0.8s;
+}
+
+.glow-word:hover,
+.glow-word.glow-lock {
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 15px #fff, 0 0 30px #fff;
+}
+

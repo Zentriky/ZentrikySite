@@ -1,0 +1,14 @@
+/*Toast CSS */
+.toast.bg-light {
+  background-color: #ffffff !important;
+  color: #000 !important;
+}
+.toast.bg-dark,
+.toast.bg-info,
+.toast.bg-danger,
+.toast.bg-warning {
+  background-color: #111 !important;
+}
+.btn-close-white {
+  filter: none;
+}

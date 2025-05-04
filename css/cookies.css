@@ -1,0 +1,20 @@
+/* Fun Cookie Animation */
+@keyframes cookie-fall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.cookie-drop {
+  position: fixed;
+  top: -10vh;
+  font-size: clamp(24px, 4vw, 48px);
+  pointer-events: none;
+  animation-name: cookie-fall;
+  animation-timing-function: linear;
+}

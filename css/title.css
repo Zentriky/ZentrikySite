@@ -1,0 +1,56 @@
+/* Title Section */
+header.title {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* Title already partly styled in base.css */
+h1[data-value] {
+  font-size: clamp(3rem, 10vw, 10rem);
+  padding: 0 clamp(1rem, 2vw, 3rem);
+  border-radius: clamp(0.4rem, 0.75vw, 1rem);
+  position: relative;
+  z-index: 3;
+}
+
+/* Glowing blob + blur */
+#blob {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 34vmax;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: linear-gradient(to right, rgb(249, 255, 127), rgb(24, 145, 189));
+  animation: rotate 20s linear infinite;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 1;
+}
+#blur {
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(12vmax);
+  pointer-events: none;
+  z-index: 2;
+}
+
+@keyframes rotate {
+  0% {
+    rotate: 0deg;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1, 1.5);
+  }
+  100% {
+    rotate: 360deg;
+  }
+}

@@ -1,0 +1,114 @@
+/* This is a large effect, providing the ability for the fracture to take place */
+.fancy {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  white-space: pre;
+}
+
+.fancy span {
+  display: inline-block;
+}
+.fancy > .outer {
+  transition: transform 0.35s ease;
+}
+.fancy:hover > .outer {
+  transition-duration: 0.8s;
+}
+.fancy:hover > .outer > .inner {
+  animation: float 5s ease infinite;
+}
+.fancy:hover > .outer > .inner > .letter {
+  background: linear-gradient(
+    to right,
+    rgba(24, 145, 189, 0.831),
+    rgb(249, 255, 127),
+    rgba(24, 145, 189, 0.744)
+  );
+  background-size: 1000%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: background-pan 150s linear infinite;
+}
+
+/* fracture transformations */
+.fancy:hover > .outer:nth-child(1) {
+  transform: translate(-100%, 60%) rotate(13deg);
+}
+.fancy:hover > .outer:nth-child(2) {
+  transform: translate(-60%, 20%) rotate(7deg);
+}
+.fancy:hover > .outer:nth-child(3) {
+  transform: translate(-40%, -20%) rotate(-11deg);
+}
+.fancy:hover > .outer:nth-child(4) {
+  transform: translate(-5%, 40%) rotate(17deg);
+}
+.fancy:hover > .outer:nth-child(5) {
+  transform: translate(-20%, -30%) rotate(-13deg);
+}
+.fancy:hover > .outer:nth-child(6) {
+  transform: translate(5%, 50%) rotate(15deg);
+}
+.fancy:hover > .outer:nth-child(7) {
+  transform: translate(30%, -50%) rotate(-19deg);
+}
+.fancy:hover > .outer:nth-child(8) {
+  transform: translate(60%, 10%) rotate(21deg);
+}
+.fancy:hover > .outer:nth-child(9) {
+  transform: translate(80%, -40%) rotate(-23deg);
+}
+.fancy:hover > .outer:nth-child(10) {
+  transform: translate(120%, 40%) rotate(25deg);
+}
+.fancy:hover > .outer:nth-child(11) {
+  transform: translate(160%, -60%) rotate(-27deg);
+}
+.fancy:hover > .outer:nth-child(12) {
+  transform: translate(-130%, -80%) rotate(29deg);
+}
+.fancy:hover > .outer:nth-child(13) {
+  transform: translate(-100%, 60%) rotate(13deg);
+}
+.fancy:hover > .outer:nth-child(14) {
+  transform: translate(-60%, 20%) rotate(7deg);
+}
+.fancy:hover > .outer:nth-child(15) {
+  transform: translate(-40%, -20%) rotate(-11deg);
+}
+.fancy:hover > .outer:nth-child(16) {
+  transform: translate(-5%, 40%) rotate(17deg);
+}
+.fancy:hover > .outer:nth-child(17) {
+  transform: translate(-20%, -30%) rotate(-13deg);
+}
+.fancy:hover > .outer:nth-child(18) {
+  transform: translate(5%, 50%) rotate(15deg);
+}
+.fancy:hover > .outer:nth-child(19) {
+  transform: translate(30%, -50%) rotate(-19deg);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+}
+@keyframes background-pan {
+  from {
+    background-position: 1000% center;
+  }
+  to {
+    background-position: 0% center;
+  }
+}

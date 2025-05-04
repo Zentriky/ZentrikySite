@@ -1,0 +1,37 @@
+/* Footer Detailing and specs */
+#footer {
+  position: relative;
+  width: 100%;
+  background: #000;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  overflow: hidden; /* keeps bubbles in */
+  z-index: 1;
+}
+
+#footer-content {
+  padding: 6rem 10%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-around;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 180px;
+}
+.footer-section-title {
+  font-family: "Space Mono", monospace;
+  font-size: 1.5rem;
+}
+.footer-section-links > a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-section-links > a:hover {
+  text-decoration: underline;
+  color: #ccc;
+}

@@ -1,0 +1,34 @@
+/* Bubble Animation for Footer */
+#bubble-wrapper {
+  position: absolute;
+  inset: 0 0 0 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+.bubble {
+  width: max(300px, 30vw);
+  height: max(300px, 30vw);
+  background: #fff;
+  opacity: 0.85;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  animation: wave 2s ease-in-out infinite;
+}
+@keyframes wave {
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -5%);
+  }
+}
+@media (prefers-reduced-motion) {
+  .bubble {
+    animation: none;
+    display: none;
+  }
+}

@@ -1,0 +1,37 @@
+/* Base Styles*/
+:root {
+  --dark: rgb(20, 20, 20);
+  --green: rgb(163, 230, 53);
+  --blue: rgb(3, 7, 18);
+
+  --left-color: var(--blue);
+  --right-color: var(--green);
+}
+
+/* Generic page defaults */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: black;
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  overflow-x: hidden;
+}
+
+h1[data-value] {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  transition: background 0.3s, color 0.3s;
+}
+h1[data-value]:hover {
+  background: #fff;
+  color: #000;
+}
