@@ -20,3 +20,14 @@
   background: #b8b8b8;
   color: #000;
 }
+
+#contact-about {
+  position: relative;
+  z-index: 10;
+}
+
+.btn-primary:active {
+  background: rgb(24, 145, 189) !important;
+  color: #fff !important;
+  border: none;
+}

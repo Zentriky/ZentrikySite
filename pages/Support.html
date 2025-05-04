@@ -43,38 +43,37 @@
         </div>
 
         <!-- Form -->
-        <form>
+        <form id="support-form" data-form-type="support">
           <div class="mb-3">
             <h5>Name</h5>
-            <input type="text" id="name" name="name" class="form-control" placeholder="Your name" required>
+            <input type="text" name="from_name" class="form-control" placeholder="Your name" required>
           </div>
           <div class="mb-3">
             <h5>Email</h5>
-            <input type="email" id="email" name="email" class="form-control" placeholder="Your email" required>
+            <input type="email" name="email_id" class="form-control" placeholder="Your email" required>
           </div>
           <div class="mb-3">
-            <h5>Request&nbsp;Type</h5>
-            <select id="type" name="type" class="form-select" required>
-              <option value="help">Help / Question</option>
-              <option value="bug">Bug Report</option>
-              <option value="feature">Feature Request</option>
+            <h5>Request Type</h5>
+            <select name="request_type" class="form-select" required>
+              <option value="Help">Help / Question</option>
+              <option value="Bug">Bug Report</option>
+              <option value="Feature">Feature Request</option>
             </select>
           </div>
           <div class="mb-3">
             <h5>Subject</h5>
-            <input type="text" id="subject" name="subject" class="form-control" placeholder="Short summary" required>
+            <input type="text" name="subject" class="form-control" placeholder="Short summary" required>
           </div>
           <div class="mb-3">
             <h5>Details</h5>
-            <textarea id="message" name="message" class="form-control" rows="5" placeholder="Tell us more..."
-              required></textarea>
+            <textarea name="message" class="form-control" rows="5" placeholder="Tell us more..." required></textarea>
           </div>
-
-          <!-- Captcha -->
-          <div class="g-recaptcha" data-sitekey="6LfPRSwrAAAAAC6tF-inCbc7e6s4oYlkbFueyxnV" data-theme="dark"></div>
-
-          <button type="submit" class="btn btn-primary mt-4">Send&nbsp;Request</button>
+        
+          <div class="g-recaptcha mb-3" data-sitekey="6LfPRSwrAAAAAC6tF-inCbc7e6s4oYlkbFueyxnV" data-theme="dark"></div>
+        
+          <button type="submit" class="btn btn-primary">Send Request</button>
         </form>
+        
       </div>
     </section>
 

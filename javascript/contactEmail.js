@@ -1,52 +1,39 @@
-/* contactEmail.js */
-
 document.addEventListener('DOMContentLoaded', () => {
-  // Initialize EmailJS with your public key
   emailjs.init('6ToLrPgZGe_2ZWxUw');
 
-  // Cache DOM elements
-  const form = document.querySelector('#contact-about form');
-  const button = form.querySelector('button[type="submit"]');
+  document.querySelectorAll('form').forEach(form => {
+    const button = form.querySelector('button[type="submit"]');
 
-  // Helper: Get reCAPTCHA token
-  function getCaptchaToken() {
-    return grecaptcha.getResponse(); // Returns "" if not completed
-  }
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
 
-  // Handle form submission
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
+      const token = grecaptcha.getResponse();
+      if (!token) {
+        showToast('Please verify that you’re a human 🙂', 'warning');
+        return;
+      }
 
-    const token = getCaptchaToken();
-    if (!token) {
-      showToast('Please verify that you’re a human 🙂', 'warning');
-      return;
-    }
+      button.disabled = true;
 
-    button.disabled = true;
+      const formData = new FormData(form);
+      const params = Object.fromEntries(formData.entries());
+      params['g-recaptcha-response'] = token;
 
-    const params = {
-      name: form.name.value,
-      email: form.email.value,
-      message: form.message.value,
-      'g-recaptcha-response': token,
-    };
-
-    try {
-      await emailjs.send('service_rvzzcoh', 'template_dfoejzm', params);
-      showToast('Message sent – thank you!', 'light');
-      form.reset();
-      grecaptcha.reset();
-    } catch (err) {
-      console.error('EmailJS error:', err.text || err);
-      showToast(err.text || 'Send failed.', 'danger');
-    } finally {
-      button.disabled = false;
-    }
+      try {
+        await emailjs.send('service_rvzzcoh', 'template_dfoejzm', params);
+        showToast('Message sent – thank you!', 'light');
+        form.reset();
+        grecaptcha.reset();
+      } catch (err) {
+        console.error('EmailJS error:', err.text || err);
+        showToast(err.text || 'Send failed.', 'danger');
+      } finally {
+        button.disabled = false;
+      }
+    });
   });
 });
 
-// Toast helper
 function showToast(message, variant = 'info', delay = 5000) {
   const container = document.getElementById('toastContainer');
   const toast = document.createElement('div');

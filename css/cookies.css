@@ -17,4 +17,5 @@
   pointer-events: none;
   animation-name: cookie-fall;
   animation-timing-function: linear;
+  z-index: 1000;
 }
