@@ -6,8 +6,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="data/logo/favicon/clear/favicon_io/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="data/logo/favicon/clear/favicon_io/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="data/logo/favicon/clear/favicon_io/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="data/logo/favicon/clear/favicon_io/android-chrome-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="data/logo/favicon/clear/favicon_io/android-chrome-512x512.png">
+  <link rel="icon" type="image/png" sizes="192x192"
+    href="data/logo/favicon/clear/favicon_io/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512"
+    href="data/logo/favicon/clear/favicon_io/android-chrome-512x512.png">
   <link rel="shortcut icon" href="data/logo/favicon/clear/favicon_io/favicon.ico">
   <link rel="manifest" href="data/logo/favicon/clear/favicon_io/site.webmanifest">
   <meta charset="UTF-8" />
@@ -54,9 +56,22 @@
       <!-- image inside <img src="/data/temp.png"> -->
       <div id="gallery-wrap">
         <div id="gallery" class="row g-3"> <!-- Bootstrap row for mobile -->
-          <div class="tile col-6 col-sm-4"><img src="data/logo/png/CroppedLogoBlack.png"></div>
-          <div class="tile col-6 col-sm-4"><img src="data/logo/png/CroppedLogoWhite.png"></div>
-          <div class="tile col-6 col-sm-4"><img src="data/logo/png/CroppedLogoBlack.png"></div>
+          <div class="tile col-6 col-sm-4" style="background: #ffffff; height: 30%; width: 20%; left: 0%; top: 0%;">
+            <a href="https://sweetrosesandmore.com" target="_blank">
+              <img src="data/otherLogos/sweetRoses.jpg" alt="Sweet Roses and More" />
+            </a>
+          </div>
+
+          <div class="tile col-6 col-sm-4" style="background: #646464; height: 20%; width: 30%; left: 43%; top: 0%;">
+            <a href="https://drewsmobiledetailing.co" target="_blank">
+              <img src="data/otherLogos/drew.jpg" alt="Drew's Mobile Detailing" />
+            </a>
+          </div>
+          <div class="tile col-6 col-sm-4" style="background: #c0c0c0; height: 10%; width: 20%; left: -5%; top: 40%;">
+            <a href="https://briancraciun.com" target="_blank">
+              <img src="data/otherLogos/brianC.png" alt="Brian Craciun" />
+            </a>
+          </div>
           <div class="tile col-6 col-sm-4"><img src="data/logo/png/CroppedLogoWhite.png"></div>
           <div class="tile col-6 col-sm-4"><img src="data/logo/png/CroppedLogoBlack.png"></div>
           <div id="desktop-only" class="tile col-6 col-sm-4"></div>
@@ -96,11 +111,13 @@
             </div>
             <div class="mb-3">
               <h5>Message</h5>
-              <textarea name="message" class="form-control" rows="5" placeholder="How can I help you?" required></textarea>
+              <textarea name="message" class="form-control" rows="5" placeholder="How can I help you?"
+                required></textarea>
             </div>
-          
-            <div class="g-recaptcha mb-3" data-sitekey="6LfPRSwrAAAAAC6tF-inCbc7e6s4oYlkbFueyxnV" data-theme="dark"></div>
-          
+
+            <div class="g-recaptcha mb-3" data-sitekey="6LfPRSwrAAAAAC6tF-inCbc7e6s4oYlkbFueyxnV" data-theme="dark">
+            </div>
+
             <button type="submit" class="btn btn-primary">Send Message</button>
           </form>
         </div>

@@ -35,3 +35,7 @@ h1[data-value]:hover {
   background: #fff;
   color: #000;
 }
+
+.btn {
+  -webkit-tap-highlight-color: transparent;
+}
