@@ -160,16 +160,3 @@
     display: none;
   }
 }
-
-.tile img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.1; /* Slightly transparent by default */
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-.tile:hover img {
-  opacity: 1; /* Full opacity on hover */
-  transform: scale(1.02); /* Optional slight zoom effect */
-}
